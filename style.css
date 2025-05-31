@@ -1,37 +1,320 @@
+/* Modern UI/UX Styling */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --text-color: #2c3e50;
+    --light-bg: #f8f9fa;
+    --icon-size: 1.2rem;
+    --icon-spacing: 0.5rem;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --logo-size: 24px;
+}
+
 body {
-    background: #1468bd;
-    font-family: 'Segoe UI', 'Meiryo', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-header img {
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(151, 71, 71, 0.1);
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
 }
 
-h1, h2, h5 {
-    font-weight: bold;
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 
-hr {
-    border-top: 2px solid #dee2e6;
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.3s ease;
 }
 
-footer {
-    letter-spacing: 1px;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
 }
 
-.table th, .table td {
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Table Styling */
+.table {
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Button Styling */
+.btn {
+    border-radius: 20px;
+    padding: 0.4rem 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Icon Styling */
+.bi {
+    font-size: var(--icon-size);
     vertical-align: middle;
+    margin-right: var(--icon-spacing);
 }
 
-@media (max-width: 576px) {
-    .container {
-        margin-top: 70px !important;
-    }
-    header img {
-        max-width: 120px;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
+/* Section Icons */
+section h2 .bi {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 0.75rem;
+}
+
+/* Card Icons */
+.card-title .bi {
+    color: var(--accent-color);
+}
+
+/* List Icons */
+.list-group-item .bi {
+    color: var(--primary-color);
+}
+
+/* Social Media Icons */
+.social-links .bi {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links .bi:hover {
+    transform: scale(1.2);
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Service Icons */
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Icons */
+.contact-info .bi {
+    color: var(--accent-color);
+    width: 1.5rem;
+    text-align: center;
+}
+
+/* Button Icons */
+.btn .bi {
+    margin-right: 0.5rem;
+}
+
+/* Navbar Icons */
+.navbar .bi {
+    font-size: 1.1rem;
+}
+
+/* Footer Icons */
+footer .bi {
+    font-size: 1.3rem;
+}
+
+/* List Group Styling */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 0.75rem 1rem;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Badge Styling */
+.badge {
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+/* Footer Styling */
+footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Social Links */
+.social-links a {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+/* Contact Info */
+.contact-info p {
+    margin-bottom: 0.75rem;
+}
+
+/* Business Hours */
+.business-hours {
+    padding: 1rem;
+    background: rgba(0,0,0,0.02);
+    border-radius: var(--border-radius-sm);
+}
+
+/* Logo Styling */
+.logo-img {
+    height: var(--logo-size);
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    object-fit: contain;
+}
+
+/* Carousel Logo Styling */
+#deraCarousel .carousel-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto;
 }
