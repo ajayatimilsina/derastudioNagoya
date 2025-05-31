@@ -3,190 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>でら! Studio</title>
+    <title>でら! Studio - クリエイティブな体験の場</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- Fixed Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="images/slide2.png" alt="でら! Studio ロゴ" style="height:32px;vertical-align:middle;margin-right:8px;">
+            <img src="images/slide2.png" alt="でら! Studio ロゴ" class="logo-img">
             でら! Studio
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">所在地</a></li>
-                <li class="nav-item"><a class="nav-link" href="#class">動画作成教室</a></li>
-                <li class="nav-item"><a class="nav-link" href="#esports">eスポーツ体験</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">その他のサービス</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sns">SNS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ticket">無料体験チケット</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-geo-alt-fill"></i> 所在地</a></li>
+                <li class="nav-item"><a class="nav-link" href="#class"><i class="bi bi-camera-reels-fill"></i> 動画作成教室</a></li>
+                <li class="nav-item"><a class="nav-link" href="#esports"><i class="bi bi-controller"></i> eスポーツ体験</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services"><i class="bi bi-grid-3x3-gap-fill"></i> その他のサービス</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sns"><i class="bi bi-share-fill"></i> SNS</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary ms-2" href="#ticket"><i class="bi bi-ticket-perforated-fill"></i> 無料体験</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container" style="margin-top: 90px;">
-    <header class="mb-4 text-center">
-        <div id="deraCarousel" class="carousel slide mb-3" data-bs-ride="carousel" style="max-width: 220px; margin: 0 auto;">
+<div class="container main-content">
+    <header class="text-center mb-5">
+        <div id="deraCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/slide2.png" class="d-block mx-auto" alt="でら! Studio ロゴ1" style="width:150px; height:150px; object-fit:contain;">
+                    <img src="images/slide2.png" class="d-block mx-auto" alt="でら! Studio ロゴ1">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slide3.png" class="d-block mx-auto" alt="でら! Studio ロゴ2" style="width:150px; height:150px; object-fit:contain;">
+                    <img src="images/slide3.png" class="d-block mx-auto" alt="でら! Studio ロゴ2">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/dera.png" class="d-block mx-auto" alt="でら! Studio ロゴ3" style="width:150px; height:150px; object-fit:contain;">
+                    <img src="images/dera.png" class="d-block mx-auto" alt="でら! Studio ロゴ3">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#deraCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#deraCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        <h1>🎥 でら! Studio</h1>
+        <h1 class="display-4 fw-bold">🎥 でら! Studio</h1>
+        <p class="lead">クリエイティブな体験の場へようこそ</p>
     </header>
 
-    <section id="about" class="mb-5 d-flex flex-column align-items-center justify-content-center" style="min-height:250px;">
-        <h2>📍所在地</h2>
-        <div class="text-center">
-            <p>〒462-0053<br>愛知県名古屋市北区光音寺町4丁目28-5</p>
-            <p>📞 TEL：052-720-8917</p>
-            <p>✉️ メール：<a href="mailto:info@ys-corp.nagoya">info@ys-corp.nagoya</a></p>
-            <p>🕒 営業日：<strong>毎週 土・日　10:00〜18:00</strong></p>
+    <section id="about" class="mb-5">
+        <div class="card">
+            <div class="card-body">
+                <h2><i class="bi bi-geo-alt"></i> 所在地</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <p><i class="bi bi-geo-alt-fill"></i> 〒462-0053<br>愛知県名古屋市北区光音寺町4丁目28-5</p>
+                            <p><i class="bi bi-telephone-fill"></i> TEL：052-720-8917</p>
+                            <p><i class="bi bi-envelope-fill"></i> メール：<a href="mailto:info@ys-corp.nagoya">info@ys-corp.nagoya</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="business-hours">
+                            <h5><i class="bi bi-clock-fill"></i> 営業時間</h5>
+                            <p><strong>毎週 土・日　10:00〜18:00</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <hr>
 
     <section id="class" class="mb-5">
-        <h2>🔰 動画作成教室（毎週日曜）</h2>
-        <p>初心者から応用まで、スマホ1台でもOK！少人数 or マンツーマンで安心！</p>
-        <div class="table-responsive">
-            <table class="table table-bordered align-middle">
-                <thead class="table-light">
-                    <tr>
-                        <th>コース名</th>
-                        <th>時間</th>
-                        <th>料金</th>
-                        <th>内容</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>初心者コース</td>
-                        <td>約30分</td>
-                        <td>1,000円</td>
-                        <td>動画の基礎から丁寧に指導（スマホ対応）<br>無料体験チケットあり！</td>
-                    </tr>
-                    <tr>
-                        <td>脱初心者コース</td>
-                        <td>約1時間</td>
-                        <td>3,000円</td>
-                        <td>応用テク、機材紹介、失敗から学んだノウハウも伝授！</td>
-                    </tr>
-                    <tr>
-                        <td>カメラレンタル</td>
-                        <td>必要時</td>
-                        <td>500円</td>
-                        <td>機材がなくても安心、手ぶらで参加OK</td>
-                    </tr>
-                </tbody>
-            </table>
+        <h2><i class="bi bi-camera-video"></i> 動画作成教室</h2>
+        <p class="lead mb-4">初心者から応用まで、スマホ1台でもOK！少人数 or マンツーマンで安心！</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-camera-reels-fill"></i> 初心者コース</h5>
+                        <p class="card-text">動画の基礎から丁寧に指導（スマホ対応）</p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-clock-fill"></i> 約30分</li>
+                            <li><i class="bi bi-currency-yen"></i> 1,000円</li>
+                        </ul>
+                        <div class="badge bg-success"><i class="bi bi-check-circle-fill"></i> 無料体験チケットあり！</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">脱初心者コース</h5>
+                        <p class="card-text">応用テク、機材紹介、失敗から学んだノウハウも伝授！</p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-clock"></i> 約1時間</li>
+                            <li><i class="bi bi-currency-yen"></i> 3,000円</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">カメラレンタル</h5>
+                        <p class="card-text">機材がなくても安心、手ぶらで参加OK</p>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-clock"></i> 必要時</li>
+                            <li><i class="bi bi-currency-yen"></i> 500円</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="mt-2">✅ 個別相談も可能：撮影・編集の不安点をスタッフがサポート！</p>
     </section>
-
-    <hr>
 
     <section id="esports" class="mb-5">
-        <h2>🎮 eスポーツ体験（事前予約制・無料体験あり）</h2>
-        <p>「ゲームは遊びじゃない！」競技としてのeスポーツを体験しよう！</p>
-        <h5>📌 提供ゲーム例：</h5>
-        <ul>
-            <li>グランツーリスモ Sports（レース）</li>
-            <li>APEX Legends（FPS）</li>
-        </ul>
-        <h5>🖥 設備：</h5>
-        <ul>
-            <li>専用コントローラー</li>
-            <li>ワイドディスプレイ</li>
-            <li>サブキーボード</li>
-            <li>VRヘッドマウント対応</li>
-        </ul>
-        <div class="table-responsive">
-            <table class="table table-bordered align-middle">
-                <thead class="table-light">
-                    <tr>
-                        <th>時間</th>
-                        <th>料金</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>15分</td><td>500円</td></tr>
-                    <tr><td>30分</td><td>900円</td></tr>
-                    <tr><td>60分</td><td>1,600円</td></tr>
-                </tbody>
-            </table>
+        <h2><i class="bi bi-controller"></i> eスポーツ体験</h2>
+        <p class="lead mb-4">「ゲームは遊びじゃない！」競技としてのeスポーツを体験しよう！</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5><i class="bi bi-controller"></i> 提供ゲーム</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="bi bi-trophy-fill"></i> グランツーリスモ Sports（レース）</li>
+                            <li class="list-group-item"><i class="bi bi-trophy-fill"></i> APEX Legends（FPS）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5><i class="bi bi-pc-display"></i> 設備</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="bi bi-check-circle"></i> 専用コントローラー</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle"></i> ワイドディスプレイ</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle"></i> サブキーボード</li>
+                            <li class="list-group-item"><i class="bi bi-check-circle"></i> VRヘッドマウント対応</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>🎫 無料体験チケットあり！（15分）</p>
+        <div class="card">
+            <div class="card-body">
+                <h5><i class="bi bi-clock-history"></i> 料金表</h5>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>時間</th>
+                                <th>料金</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>15分</td><td>500円</td></tr>
+                            <tr><td>30分</td><td>900円</td></tr>
+                            <tr><td>60分</td><td>1,600円</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="badge bg-success">無料体験チケットあり！（15分）</div>
+            </div>
+        </div>
     </section>
-
-    <hr>
 
     <section id="services" class="mb-5">
-        <h2>🛠 その他のサービス</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered align-middle">
-                <thead class="table-light">
-                    <tr>
-                        <th>サービス名</th>
-                        <th>内容</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>ネっ活サービス</td><td>地域とつながるネット活用支援</td></tr>
-                    <tr><td>プログラミング教室</td><td>Scratch・Excel・VBA対応</td></tr>
-                    <tr><td>動画撮影スタジオ貸出</td><td>レンタルスタジオとして利用可能（準備中・事前予約受付中）</td></tr>
-                    <tr><td>旅行サポート</td><td>イベント・旅の思い出を動画に</td></tr>
-                </tbody>
-            </table>
+        <h2><i class="bi bi-tools"></i> その他のサービス</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-globe2"></i> ネっ活サービス</h5>
+                        <p class="card-text">地域とつながるネット活用支援</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-code-square"></i> プログラミング教室</h5>
+                        <p class="card-text">Scratch・Excel・VBA対応</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-camera-video-fill"></i> 動画撮影スタジオ</h5>
+                        <p class="card-text">レンタルスタジオとして利用可能（準備中・事前予約受付中）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-airplane-fill"></i> 旅行サポート</h5>
+                        <p class="card-text">イベント・旅の思い出を動画に</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <hr>
-
     <section id="sns" class="mb-5">
-        <h2>📱 SNS / 動画案内</h2>
-        <ul>
-            <li><a href="#">YouTube（動画で道順チェック）</a></li>
-            <li>Instagram / LINE VOOM でも配信中！</li>
-        </ul>
+        <h2><i class="bi bi-share"></i> SNS / 動画案内</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="bi bi-youtube"></i> YouTube</h5>
+                        <p>動画で道順チェック</p>
+                        <a href="#" class="btn btn-danger"><i class="bi bi-youtube"></i> YouTubeチャンネル</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="bi bi-instagram"></i> Instagram / LINE VOOM</h5>
+                        <p>最新情報を配信中！</p>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-primary"><i class="bi bi-instagram"></i> Instagram</a>
+                            <a href="#" class="btn btn-success"><i class="bi bi-chat-dots-fill"></i> LINE VOOM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <hr>
-
     <section id="ticket" class="mb-5">
-        <h2>🎟 無料体験チケット</h2>
-        <ul>
-            <li>動画教室 初心者コース（30分）</li>
-            <li>eスポーツ体験（15分）</li>
-        </ul>
+        <h2><i class="bi bi-ticket-perforated"></i> 無料体験チケット</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="bi bi-camera-video"></i> 動画教室 初心者コース</h5>
+                        <p>30分の無料体験</p>
+                        <a href="#" class="btn btn-primary">申し込む</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><i class="bi bi-controller"></i> eスポーツ体験</h5>
+                        <p>15分の無料体験</p>
+                        <a href="#" class="btn btn-primary">申し込む</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 
-<footer class="bg-dark text-white text-center py-3 mt-4">
-    &copy; 2025 でら! Studio
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>でら! Studio</h5>
+                <p>クリエイティブな体験の場</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p>&copy; 2025 でら! Studio</p>
+                <div class="social-links">
+                    <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-chat-dots-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
