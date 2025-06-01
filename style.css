@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Modern UI/UX Styling */
 :root {
     --primary-color: #1a237e;    /* Darker blue */
@@ -69,33 +68,24 @@ h5 {
 }
 
 .nav-link {
-    color: #ff0000 !important;
+    color: #ffffff !important;
     font-weight: 500;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .nav-link:hover {
-    color: #ffffff !important;
+    color: #cccccc !important;
 }
 
 .nav-link .bi {
-    color: #ff0000;
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover .bi {
-    color: #ff0000;
-}
-
-/* Active Navigation Item */
-.nav-link.active {
-    color: #ffffff !important;
-    font-weight: 600;
-}
-
-.nav-link.active .bi {
-    color: #ff0000;
+    color: #cccccc;
 }
 
 /* Table Text */
@@ -117,6 +107,11 @@ h5 {
 .list-group-item {
     color: #000000;
     font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(0,0,0,0.05);
 }
 
 /* Contact Info */
@@ -165,6 +160,28 @@ footer p {
 .btn {
     font-weight: 600;
     font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
 }
 
 /* Main Content Spacing */
@@ -192,15 +209,24 @@ section:last-child {
 /* Card Spacing */
 .card {
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:last-child {
     margin-bottom: 0;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 /* Navbar Styling */
 .navbar {
-    background-color: #000000 !important;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: var(--navbar-height);
+    padding: 0.5rem 0;
 }
 
 /* Carousel Spacing */
@@ -250,23 +276,32 @@ footer {
 }
 
 .nav-link {
-    color: #ffffff !important;
+    color: rgba(255,255,255,0.9) !important;
     font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0.75rem;
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link.active {
     color: #ffffff !important;
-}
-
-.nav-link .bi {
-    color: #ff0000;
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.nav-link:hover .bi {
-    color: #ff0000;
+    font-weight: 600;
 }
 
 /* Section Styling */
@@ -298,12 +333,6 @@ h2::after {
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: var(--border-radius-md);
     box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* Table Styling */
@@ -317,28 +346,7 @@ h2::after {
 .btn {
     border-radius: 20px;
     padding: 0.4rem 1.5rem;
-    transition: all 0.3s ease;
     font-weight: 500;
-}
-
-.btn-primary {
-    background-color: var(--accent-color);
-    border: none;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #1565c0;
-    color: white;
-}
-
-.btn-danger {
-    background-color: #d32f2f;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #b71c1c;
 }
 
 /* Animation Classes */
@@ -422,11 +430,12 @@ section h2 .bi {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .service-icon:hover {
     transform: scale(1.1);
+    color: var(--secondary-color);
 }
 
 /* Contact Icons */
@@ -477,12 +486,12 @@ footer .bi {
 /* Social Links */
 .social-links a {
     color: rgba(255,255,255,0.9) !important;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    opacity: 1;
+    color: #ffffff !important;
+    transform: translateY(-3px);
 }
 
 /* Logo Styling */
@@ -512,325 +521,116 @@ a:hover {
     color: #1565c0;
     text-decoration: underline;
 }
-=======
-/* Modern UI/UX Styling */
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #e74c3c;
-    --accent-color: #3498db;
-    --text-color: #2c3e50;
-    --light-bg: #f8f9fa;
-    --icon-size: 1.2rem;
-    --icon-spacing: 0.5rem;
-    --border-radius-sm: 8px;
-    --border-radius-md: 12px;
-    --border-radius-lg: 16px;
-    --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    --logo-size: 24px;
-}
 
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-/* Navbar Styling */
-.navbar {
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.nav-link {
-    position: relative;
-    padding: 0.5rem 0.75rem;
+/* Navigation Items Styling */
+.nav-item .nav-link {
+    color: #ffffff !important;
     transition: color 0.3s ease;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: var(--secondary-color);
-    transition: all 0.3s ease;
+.nav-item .nav-link .bi {
+    color: #ffffff;
+    transition: color 0.3s ease;
 }
 
-.nav-link:hover::after {
-    width: 100%;
-    left: 0;
+/* Location Navigation Item */
+.nav-item:first-child .nav-link {
+    color: #ff6b6b !important;
 }
 
-/* Section Styling */
-section {
-    padding: 3rem 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
+.nav-item:first-child .nav-link .bi {
+    color: #ff6b6b;
 }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+.nav-item:first-child .nav-link:hover {
+    color: #ff8787 !important;
 }
 
-h2 {
-    color: var(--primary-color);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+.nav-item:first-child .nav-link:hover .bi {
+    color: #ff8787;
+}
+
+/* Video Class Navigation Item */
+.nav-item:nth-child(2) .nav-link {
+    color: #4dabf7 !important;
+}
+
+.nav-item:nth-child(2) .nav-link .bi {
+    color: #4dabf7;
+}
+
+.nav-item:nth-child(2) .nav-link:hover {
+    color: #74c0fc !important;
+}
+
+.nav-item:nth-child(2) .nav-link:hover .bi {
+    color: #74c0fc;
+}
+
+/* Esports Navigation Item */
+.nav-item:nth-child(3) .nav-link {
+    color: #51cf66 !important;
+}
+
+.nav-item:nth-child(3) .nav-link .bi {
+    color: #51cf66;
+}
+
+.nav-item:nth-child(3) .nav-link:hover {
+    color: #69db7c !important;
+}
+
+.nav-item:nth-child(3) .nav-link:hover .bi {
+    color: #69db7c;
+}
+
+/* Other Services Navigation Item */
+.nav-item:nth-child(4) .nav-link {
+    color: #ffd43b !important;
+}
+
+.nav-item:nth-child(4) .nav-link .bi {
+    color: #ffd43b;
+}
+
+.nav-item:nth-child(4) .nav-link:hover {
+    color: #fcc419 !important;
+}
+
+.nav-item:nth-child(4) .nav-link:hover .bi {
+    color: #fcc419;
+}
+
+/* SNS Navigation Item */
+.nav-item:nth-child(5) .nav-link {
+    color: #cc5de8 !important;
+}
+
+.nav-item:nth-child(5) .nav-link .bi {
+    color: #cc5de8;
+}
+
+.nav-item:nth-child(5) .nav-link:hover {
+    color: #da77f2 !important;
+}
+
+.nav-item:nth-child(5) .nav-link:hover .bi {
+    color: #da77f2;
+}
+
+/* Active Navigation Item */
+.nav-link.active {
+    font-weight: 600;
     position: relative;
-    padding-bottom: 0.75rem;
 }
 
-h2::after {
+.nav-link.active::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
+    width: 100%;
     height: 2px;
-    background-color: var(--secondary-color);
-}
-
-/* Card Styling */
-.card {
-    border: none;
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-/* Table Styling */
-.table {
-    border-radius: var(--border-radius-sm);
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}
-
-.table thead th {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1rem;
-}
-
-.table td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Button Styling */
-.btn {
-    border-radius: 20px;
-    padding: 0.4rem 1.5rem;
+    background-color: currentColor;
     transition: all 0.3s ease;
-    font-weight: 500;
 }
-
-.btn-primary {
-    background-color: var(--accent-color);
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-1px);
-}
-
-/* Animation Classes */
-.fade-in {
-    animation: fadeIn 0.6s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    section {
-        padding: 2rem 0;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
-}
-
-/* Icon Styling */
-.bi {
-    font-size: var(--icon-size);
-    vertical-align: middle;
-    margin-right: var(--icon-spacing);
-}
-
-/* Section Icons */
-section h2 .bi {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-right: 0.75rem;
-}
-
-/* Card Icons */
-.card-title .bi {
-    color: var(--accent-color);
-}
-
-/* List Icons */
-.list-group-item .bi {
-    color: var(--primary-color);
-}
-
-/* Social Media Icons */
-.social-links .bi {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.social-links .bi:hover {
-    transform: scale(1.2);
-}
-
-/* Feature Icons */
-.feature-icon {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-/* Service Icons */
-.service-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.service-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Contact Icons */
-.contact-info .bi {
-    color: var(--accent-color);
-    width: 1.5rem;
-    text-align: center;
-}
-
-/* Button Icons */
-.btn .bi {
-    margin-right: 0.5rem;
-}
-
-/* Navbar Icons */
-.navbar .bi {
-    font-size: 1.1rem;
-}
-
-/* Footer Icons */
-footer .bi {
-    font-size: 1.3rem;
-}
-
-/* List Group Styling */
-.list-group-item {
-    border: none;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    padding: 0.75rem 1rem;
-}
-
-.list-group-item:last-child {
-    border-bottom: none;
-}
-
-/* Badge Styling */
-.badge {
-    padding: 0.4rem 0.8rem;
-    font-weight: 500;
-    border-radius: 12px;
-}
-
-/* Footer Styling */
-footer {
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Social Links */
-.social-links a {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.social-links a:hover {
-    opacity: 1;
-}
-
-/* Contact Info */
-.contact-info p {
-    margin-bottom: 0.75rem;
-}
-
-/* Business Hours */
-.business-hours {
-    padding: 1rem;
-    background: rgba(0,0,0,0.02);
-    border-radius: var(--border-radius-sm);
-}
-
-/* Logo Styling */
-.logo-img {
-    height: var(--logo-size);
-    width: auto;
-    vertical-align: middle;
-    margin-right: 0.5rem;
-    object-fit: contain;
-}
-
-/* Carousel Logo Styling */
-#deraCarousel .carousel-item img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    margin: 0 auto;
-}
->>>>>>> 791047760b3e4dc9ba00fa86e4f728671fa684da
