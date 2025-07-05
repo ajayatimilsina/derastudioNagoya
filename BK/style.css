@@ -371,7 +371,7 @@ h2::after {
 }
 
 ::-webkit-scrollbar-track {
-    background: #ece4e4;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -465,7 +465,7 @@ footer .bi {
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     padding: 0.75rem 1rem;
-    background-color: rgb(240, 230, 230);
+    background-color: white;
 }
 
 .list-group-item:last-child {
@@ -490,7 +490,7 @@ footer .bi {
 }
 
 .social-links a:hover {
-    color: #313133 !important;
+    color: #ffffff !important;
     transform: translateY(-3px);
 }
 
@@ -633,28 +633,4 @@ a:hover {
     height: 2px;
     background-color: currentColor;
     transition: all 0.3s ease;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#class {
-  background: #e8f5e9;
-}
-
-#esports {
-  background: #ffebee;
-}
-
-#services {
-  background: #fff8e1;
-}
-
-#programming {
-  background: #e3f2fd;
-}
-
-#studio {
-  background: #fce4ec;
 }
