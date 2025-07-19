@@ -1,0 +1,6 @@
+# derastudioNagoya
+#git config --global user.name "ajayatimilsina"
+git config --global user.email "ajayatimilsina1@gmail.com"
+#git add .
+#git commit -m "Your message here"
+#git push origin main
